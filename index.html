@@ -90,6 +90,37 @@
       transform: translateY(-5px);
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     }
+
+    /* Botão do carrossel visível em celulares */
+    .carousel-caption {
+      bottom: 20%;
+    }
+    .carousel-caption h5,
+    .carousel-caption p,
+    .carousel-caption .btn-custom {
+      color: #fff;
+    }
+
+    /* Destaque para telefone e email */
+    .contact-link {
+      display: inline-block;
+      background-color: #ff7b00;
+      color: #fff !important;
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .contact-link i {
+      margin-right: 0.4rem;
+    }
+
+    .contact-link:hover {
+      background-color: #0055aa;
+      color: #fff !important;
+    }
   </style>
 </head>
 <body>
@@ -125,7 +156,7 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="imagem/man-8889170_1280 homen img.jpg" class="d-block w-100" alt="Serviço 1">
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption d-block">
             <h5>Excelência no atendimento</h5>
             <p>Projetos com qualidade, segurança e inovação.</p>
             <a href="#contato" class="btn btn-custom mt-3">Solicite um Orçamento</a>
@@ -133,7 +164,7 @@
         </div>
         <div class="carousel-item">
           <img src="imagem/wire-1098059_1280 quadro.jpg" class="d-block w-100" alt="Serviço 2">
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption d-block">
             <h5>Manutenção Industrial</h5>
             <p>Serviços eficientes e duradouros.</p>
             <a href="#contato" class="btn btn-custom mt-3">Solicite um Orçamento</a>
@@ -141,7 +172,7 @@
         </div>
         <div class="carousel-item">
           <img src="imagem/electric-4198293_640.jpg" class="d-block w-100" alt="Serviço 3">
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption d-block">
             <h5>Projetos Personalizados</h5>
             <p>Soluções sob medida para sua necessidade.</p>
             <a href="#contato" class="btn btn-custom mt-3">Solicite um Orçamento</a>
@@ -320,19 +351,27 @@
         </div>
         <div class="col-md-4 mb-3">
           <h5 class="fw-bold">Contato</h5>
-          <p><i class="bi bi-geo-alt-fill"></i> Rua Júlia Lemos Rogério n⁰16 Casa Branca Suzano SP CEP 08663-510</p>
-          <p><i class="bi bi-telephone-fill"></i> 
-            <a href="tel:+5511940392547" class="text-white">+55 11 94039-2547</a>
+          <p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Rua+Júlia+Lemos+Rogério+16+Casa+Branca+Suzano+SP" target="_blank" class="contact-link">
+              <i class="bi bi-geo-alt-fill"></i> Rua Júlia Lemos Rogério n⁰16 Casa Branca Suzano SP CEP 08663-510
+            </a>
           </p>
-          <p><i class="bi bi-envelope-fill"></i> 
-            <a href="mailto:mklservicos@yahoo.com" class="text-white">mklservicos@yahoo.com</a>
+          <p>
+            <a href="tel:+5511940392547" class="contact-link">
+              <i class="bi bi-telephone-fill"></i> +55 11 94039-2547
+            </a>
+          </p>
+          <p>
+            <a href="mailto:mklservicos@yahoo.com" class="contact-link">
+              <i class="bi bi-envelope-fill"></i> mklservicos@yahoo.com
+            </a>
           </p>
         </div>
         <div class="col-md-4 mb-3">
           <h5 class="fw-bold">Siga-nos</h5>
-          <a href="https://www.facebook.com/" target="_blank" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
-          <a href="https://www.instagram.com/" target="_blank" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
-          <a href="https://www.linkedin.com/" target="_blank" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
+          <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
         </div>
       </div>
       <hr class="border-light">
