@@ -73,6 +73,13 @@
       transition: background-color 0.3s;
     }
     #btnTopo:hover { background-color: #0055aa; }
+
+    /* Evita espaço no topo com navbar fixa */
+    body::before {
+      content: "";
+      display: block;
+      height: 70px;
+    }
   </style>
 </head>
 <body>
@@ -279,10 +286,15 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    // Garantir abertura no topo
-    document.addEventListener("DOMContentLoaded", function() {
+    // 🔝 Garante que o site sempre abra no topo
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 100);
+    });
+
+    window.addEventListener("pageshow", () => {
       window.scrollTo(0, 0);
-      setTimeout(() => window.scrollTo(0, 0), 50); // Pequeno delay para dispositivos móveis
     });
   </script>
 </body>
