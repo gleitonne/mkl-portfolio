@@ -10,23 +10,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; padding: 0; }
 
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    .navbar {
-      background: linear-gradient(90deg, #0055aa, #ff7b00);
-    }
-    .navbar-brand {
-      font-weight: 700;
-      color: #fff !important;
-      font-size: 1.6rem;
-    }
+    .navbar { background: linear-gradient(90deg, #0055aa, #ff7b00); }
+    .navbar-brand { font-weight: 700; color: #fff !important; font-size: 1.6rem; }
     .navbar-brand span { color: #469049; }
     .nav-link { color: #fff !important; font-weight: 500; }
     .nav-link:hover { text-decoration: underline; }
@@ -42,7 +30,7 @@
     }
     .btn-custom:hover { background-color: #ff7b00; }
 
-    footer { background-color: #0055aa; color: #fff; margin-top: 50px; }
+    footer { background-color: #0055aa; color: #fff; margin-top: 50px; position: relative; }
     footer a { color: #fff; text-decoration: none; }
     footer a:hover { color: #ff7b00; }
 
@@ -65,6 +53,26 @@
     .carousel-caption p,
     .carousel-caption .btn-custom { color: #fff; }
 
+    /* Botão Voltar ao Topo */
+    #btnTopo {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ff7b00;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1000;
+      font-size: 24px;
+      transition: background-color 0.3s;
+    }
+    #btnTopo:hover { background-color: #0055aa; }
   </style>
 </head>
 <body onload="window.scrollTo(0,0)">
@@ -232,7 +240,7 @@
       <div class="row text-center text-md-start">
         <div class="col-md-4 mb-3">
           <h5 class="fw-bold">MKL Serviços</h5>
-          <p>Prestamos serviços de manutenção residencial e predial.</p>
+          <p>"Oferecemos serviços completos de manutenção residencial e predial, garantindo qualidade, segurança e eficiência em cada atendimento."</p>
         </div>
         <div class="col-md-4 mb-3">
           <h5 class="fw-bold">Contato</h5>
@@ -242,9 +250,9 @@
         </div>
         <div class="col-md-4 mb-3">
           <h5 class="fw-bold">Siga-nos</h5>
-          <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
-          <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
-          <a href="#" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
+          <a href="https://www.facebook.com/seuPerfil" target="_blank" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="https://www.instagram.com/seuPerfil" target="_blank" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="https://www.linkedin.com/in/seuPerfil" target="_blank" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
         </div>
       </div>
       <hr class="border-light">
@@ -252,6 +260,22 @@
     </div>
   </footer>
 
+  <!-- BOTÃO VOLTAR AO TOPO -->
+  <button id="btnTopo" title="Voltar ao Topo"><i class="bi bi-arrow-up"></i></button>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const btnTopo = document.getElementById("btnTopo");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        btnTopo.style.display = "flex";
+      } else {
+        btnTopo.style.display = "none";
+      }
+    };
+    btnTopo.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
 </body>
 </html>
