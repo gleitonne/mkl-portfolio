@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MKL Serviços</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    /* Rolagem suave */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* HEADER */
+    .navbar {
+      background: linear-gradient(90deg, #0055aa, #ff7b00);
+    }
+    .navbar-brand {
+      font-weight: 700;
+      color: #fff !important;
+      font-size: 1.6rem;
+    }
+    .navbar-brand span {
+      color: #469049;
+    }
+    .nav-link {
+      color: #fff !important;
+      font-weight: 500; 
+    }
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    /* SEÇÕES */
+    section {
+      padding: 60px 0;
+    }
+
+    /* SERVIÇOS */
+    .servico-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .servico-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* BOTÃO */
+    .btn-custom {
+      background-color: #0055aa;
+      color: #fff;
+      border: none;
+    }
+    .btn-custom:hover {
+      background-color: #ff7b00;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #0055aa;
+      color: #fff;
+      margin-top: 50px;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #ff7b00;
+    }
+
+    /* CARTÕES */
+    .destaque-card img {
+      width: 100%;
+      height: auto;
+    }
+    .destaque-card {
+      margin-bottom: 30px;
+    }
+
+    #cartoes-carrossel .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    #cartoes-carrossel .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">MKL <span>Serviços</span></a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#destaques">Projetos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CARROSSEL -->
+  <section id="inicio">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="imagem/man-8889170_1280 homen img.jpg" class="d-block w-100" alt="Serviço 1">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Excelência no atendimento</h5>
+            <p>Projetos com qualidade, segurança e inovação.</p>
+            <a href="#contato" class="btn btn-custom mt-3">Solicite um Orçamento</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="imagem/wire-1098059_1280 quadro.jpg" class="d-block w-100" alt="Serviço 2">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Manutenção Industrial</h5>
+            <p>Serviços eficientes e duradouros.</p>
+            <a href="#contato" class="btn btn-custom mt-3">Solicite um Orçamento</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="imagem/electric-4198293_640.jpg" class="d-block w-100" alt="Serviço 3">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Projetos Personalizados</h5>
+            <p>Soluções sob medida para sua necessidade.</p>
+            <a href="#contato" class="btn btn-custom mt-3">Solicite um Orçamento</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section id="cartoes-carrossel" class="container text-center my-5">
+    <h2 class="mb-4">Nossos Diferenciais</h2>
+    <div class="row justify-content-center g-4">
+      <div class="col-md-4 col-lg-2">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-lightning-charge fs-1 text-primary mb-3"></i>
+            <h5 class="card-title">Agilidade</h5>
+            <p class="card-text">Atendimento rápido e eficiente em todas as etapas do serviço.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-2">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-shield-check fs-1 text-success mb-3"></i>
+            <h5 class="card-title">Segurança</h5>
+            <p class="card-text">Trabalhamos seguindo todas as normas de segurança e qualidade.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-2">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-gear-wide-connected fs-1 text-warning mb-3"></i>
+            <h5 class="card-title">Tecnologia</h5>
+            <p class="card-text">Utilizamos equipamentos modernos para garantir precisão e eficiência.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-2">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-people fs-1 text-danger mb-3"></i>
+            <h5 class="card-title">Equipe Especializada</h5>
+            <p class="card-text">Profissionais qualificados e comprometidos com resultados.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-2">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-award fs-1 text-info mb-3"></i>
+            <h5 class="card-title">Qualidade</h5>
+            <p class="card-text">Garantia de excelência em cada serviço prestado.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE NÓS -->
+  <section id="sobre" class="container text-center">
+    <h2>Sobre Nós</h2>
+    <p class="mt-3">A <strong>MKL Serviços</strong> com experiência e dedicação realiza manutenção industrial e residencial com máxima segurança e eficiência. Nossos profissionais asseguram soluções rápidas e confiáveis para todos os tipos de reparos e instalações.</p>
+    <a href="#servicos" class="btn btn-custom mt-3">Conheça Nossos Serviços</a>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="bg-light">
+    <div class="container text-center">
+      <h2>Nossos Serviços</h2>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="card servico-card p-3">
+            <h4>Instalações Elétricas</h4>
+            <p>Instalações, manutenções e reparos com segurança e eficiência para sua casa ou empresa.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card servico-card p-3">
+            <h4>Manutenção Industrial e Residencial</h4>
+            <p>Serviços completos de manutenção industrial e residencial, garantindo segurança, eficiência e qualidade.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card servico-card p-3">
+            <h4>Projetos Personalizados</h4>
+            <p>Planejamento e execução conforme as necessidades do cliente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS EM DESTAQUE -->
+  <section id="destaques" class="container text-center my-5">
+    <h2>Projetos em Destaque</h2>
+    <div class="row justify-content-center mt-4 g-4">
+      <div class="col-lg-12 destaque-card">
+        <div class="card">
+          <img src="imagem/istockphoto-2149528177-612x612 gingante quadro.jpg" class="card-img-top" alt="Projeto 1">
+          <div class="card-body">
+            <p class="card-text">Projeto 1: descrição resumida do serviço ou resultado alcançado.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 destaque-card">
+        <div class="card">
+          <img src="imagem/04b7b3e04745ff35b13fa63a04cca971 quadro grande.jpg" class="card-img-top" alt="Projeto 2">
+          <div class="card-body">
+            <p class="card-text">Projeto 2: descrição resumida do serviço ou resultado alcançado.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 destaque-card">
+        <div class="card">
+          <img src="imagem/serviço-eletrica-eletricista-residencial-pedreiro-Obra lage.jpg" class="card-img-top" alt="Projeto 3">
+          <div class="card-body">
+            <p class="card-text">Projeto 3: descrição resumida do serviço ou resultado alcançado.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFÓLIO -->
+  <section id="portfolio" class="container text-center">
+    <h2>Nosso Portfólio</h2>  
+    <div class="row mt-4 g-3">
+      <div class="col-md-4"><img src="imagem/Captura de tela PERFIL.png" class="img-fluid rounded" alt="Projeto 1"></div>
+      <div class="col-md-4"><img src="imagem/electric-4198293_640.jpg" class="img-fluid rounded" alt="Projeto 2"></div>
+      <div class="col-md-4"><img src="imagem/istockphoto-937114374-1024x1024 tomada.jpg" class="img-fluid rounded" alt="Projeto 3"></div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="bg-light py-5" id="contato-form">
+    <div class="container text-center">
+      <h2>Entre em Contato</h2>
+      <form class="mt-4">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="Seu nome" required>
+          </div>
+          <div class="col-md-4">
+            <input type="email" class="form-control" placeholder="Seu e-mail" required>
+          </div>
+          <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="Telefone (opcional)">
+          </div>
+          <div class="col-12">
+            <textarea class="form-control" rows="4" placeholder="Sua mensagem" required></textarea>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-custom mt-3">Enviar Mensagem</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer id="contato" class="text-center text-lg-start">
+    <div class="container py-4">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">MKL Serviços</h5>
+          <p>Prestamos serviços de manutenção residencial e predial, atuando nas áreas de elétrica, hidráulica e civil.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Contato</h5>
+          <p><i class="bi bi-geo-alt-fill"></i> Rua Júlia Lemos Rogério n⁰16 Casa Branca Suzano SP CEP 08663-510</p>
+          <p><i class="bi bi-telephone-fill"></i> +55 11 94039-2547</p>
+          <p><i class="bi bi-envelope-fill"></i> contato@mklservicos.com.br</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Siga-nos</h5>
+          <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
+        </div>
+      </div>
+      <hr class="border-light">
+      <div class="text-center">
+        <p class="mb-0">© 2025 MKL Serviços — Todos os direitos reservados.</p>
+        <small>CNPJ: 00.000.000/0001-00</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
