@@ -75,7 +75,7 @@
     #btnTopo:hover { background-color: #0055aa; }
   </style>
 </head>
-<body onload="window.scrollTo(0,0)">
+<body>
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg fixed-top">
@@ -263,8 +263,10 @@
   <!-- BOTÃO VOLTAR AO TOPO -->
   <button id="btnTopo" title="Voltar ao Topo"><i class="bi bi-arrow-up"></i></button>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
+    // Botão voltar ao topo
     const btnTopo = document.getElementById("btnTopo");
     window.onscroll = function() {
       if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -275,6 +277,12 @@
     };
     btnTopo.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Garantir abertura no topo
+    document.addEventListener("DOMContentLoaded", function() {
+      window.scrollTo(0, 0);
+      setTimeout(() => window.scrollTo(0, 0), 50); // Pequeno delay para dispositivos móveis
     });
   </script>
 </body>
