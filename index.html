@@ -75,18 +75,18 @@
     #btnTopo:hover { background-color: #0055aa; }
   </style>
 </head>
-<body onload="window.scrollTo(0,0)">
+<body>
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#topo">MKL <span>Serviços</span></a>
+      <a class="navbar-brand link-topo" href="#">MKL <span>Serviços</span></a>
       <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#topo">Início</a></li>
+          <li class="nav-item"><a class="nav-link link-topo" href="#">Início</a></li>
           <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
           <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
           <li class="nav-item"><a class="nav-link" href="#destaques">Projetos</a></li>
@@ -143,14 +143,13 @@
     </div>
   </section>
 
-  <!-- SOBRE -->
+  <!-- SEÇÕES: SOBRE, SERVIÇOS, DESTAQUES, PORTFÓLIO, CONTATO -->
   <section id="sobre" class="container text-center">
     <h2>Sobre Nós</h2>
-    <p class="mt-3">A <strong>MKL Serviços</strong> com experiência e dedicação realiza manutenção industrial e residencial com máxima segurança e eficiência.</p>
+    <p class="mt-3">A <strong>MKL Serviços</strong> realiza manutenção industrial e residencial com máxima segurança e eficiência.</p>
     <a href="#servicos" class="btn btn-custom mt-3">Conheça Nossos Serviços</a>
   </section>
 
-  <!-- SERVIÇOS -->
   <section id="servicos" class="bg-light">
     <div class="container text-center">
       <h2>Nossos Serviços</h2>
@@ -177,38 +176,18 @@
     </div>
   </section>
 
-  <!-- PROJETOS EM DESTAQUE -->
   <section id="destaques" class="container text-center my-5">
     <h2>Projetos em Destaque</h2>
     <div class="row justify-content-center mt-4 g-4">
       <div class="col-lg-12 destaque-card">
         <div class="card">
           <img src="imagem/istockphoto-2149528177-612x612 gingante quadro.jpg" class="card-img-top" alt="Projeto 1">
-          <div class="card-body">
-            <p class="card-text">Projeto 1: descrição resumida do serviço ou resultado alcançado.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-12 destaque-card">
-        <div class="card">
-          <img src="imagem/04b7b3e04745ff35b13fa63a04cca971 quadro grande.jpg" class="card-img-top" alt="Projeto 2">
-          <div class="card-body">
-            <p class="card-text">Projeto 2: descrição resumida do serviço ou resultado alcançado.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-12 destaque-card">
-        <div class="card">
-          <img src="imagem/serviço-eletrica-eletricista-residencial-pedreiro-Obra lage.jpg" class="card-img-top" alt="Projeto 3">
-          <div class="card-body">
-            <p class="card-text">Projeto 3: descrição resumida do serviço ou resultado alcançado.</p>
-          </div>
+          <div class="card-body"><p class="card-text">Projeto 1: descrição resumida.</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PORTFÓLIO -->
   <section id="portfolio" class="container text-center">
     <h2>Nosso Portfólio</h2>
     <div class="row mt-4 g-3">
@@ -218,7 +197,6 @@
     </div>
   </section>
 
-  <!-- CONTATO -->
   <section class="bg-light py-5" id="contato">
     <div class="container text-center">
       <h2>Entre em Contato</h2>
@@ -240,7 +218,7 @@
       <div class="row text-center text-md-start">
         <div class="col-md-4 mb-3">
           <h5 class="fw-bold">MKL Serviços</h5>
-          <p>"Oferecemos serviços completos de manutenção residencial e predial, garantindo qualidade, segurança e eficiência em cada atendimento."</p>
+          <p>Prestamos serviços de manutenção residencial e predial.</p>
         </div>
         <div class="col-md-4 mb-3">
           <h5 class="fw-bold">Contato</h5>
@@ -251,8 +229,8 @@
         <div class="col-md-4 mb-3">
           <h5 class="fw-bold">Siga-nos</h5>
           <a href="https://www.facebook.com/seuPerfil" target="_blank" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
-          <a href="https://www.instagram.com/" target="_blank" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
-          <a href="https://www.linkedin.com/home" target="_blank" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
+          <a href="https://www.instagram.com/seuPerfil" target="_blank" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="https://www.linkedin.com/in/seuPerfil" target="_blank" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
         </div>
       </div>
       <hr class="border-light">
@@ -265,16 +243,21 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
+    // Função voltar ao topo
     const btnTopo = document.getElementById("btnTopo");
     window.onscroll = function() {
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        btnTopo.style.display = "flex";
-      } else {
-        btnTopo.style.display = "none";
-      }
+      btnTopo.style.display = (document.documentElement.scrollTop > 200) ? "flex" : "none";
     };
     btnTopo.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Corrigir links para iniciar no topo em smartphones
+    document.querySelectorAll('.link-topo').forEach(link => {
+      link.addEventListener('click', function(e){
+        e.preventDefault();
+        document.getElementById('topo').scrollIntoView({ behavior: 'smooth' });
+      });
     });
   </script>
 </body>
